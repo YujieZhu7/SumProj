@@ -102,7 +102,7 @@ while traj < 100:
             inputs = process_inputs(state, desired_goal, o_mean=state_stats[0], o_std=np.sqrt(state_stats[1]),
                                         g_mean=goal_stats[0], g_std=np.sqrt(goal_stats[1]))
             action = agent.choose_action(inputs)
-            var = 0.1
+            var = 0.5
             noise = np.random.normal(0, max_action * var, size=action_dim)
             action = np.clip(action + noise, -max_action, max_action)
             next_obs, reward, done_rb, done, info = env.step(action)
@@ -123,7 +123,7 @@ while traj < 100:
 
 print("Average score of demonstrations = ", np.mean(score_history))
 print("Average success of demonstrations = ", np.mean(success_history))
-file_name = f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_test.pkl"
+file_name = f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData.pkl"
 open_file = open(file_name, "wb")
 pickle.dump(replay_buffer, open_file)
 open_file.close()

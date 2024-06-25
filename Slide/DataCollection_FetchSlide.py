@@ -78,7 +78,7 @@ agent.critic.load_state_dict(torch.load(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/Py
 agent.critic_target.load_state_dict(torch.load(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/SaveModels/{env_name}/TD3_HER_expert_critictarget", map_location=device))
 
 
-# rand_prob = 0.01
+rand_prob = 0.1
 traj = 0
 # dones = []
 
@@ -97,14 +97,17 @@ while traj < 100:
     while not (done):
         with torch.no_grad():
             # add some random noise to the action
-            state_stats = finalize(states_agg)  # return (mean, variance, sampleVariance)
-            goal_stats = finalize(goals_agg)
-            inputs = process_inputs(state, desired_goal, o_mean=state_stats[0], o_std=np.sqrt(state_stats[1]),
+            if random.random() <= rand_prob:
+                action = env.action_space.sample()
+            else:
+                state_stats = finalize(states_agg)  # return (mean, variance, sampleVariance)
+                goal_stats = finalize(goals_agg)
+                inputs = process_inputs(state, desired_goal, o_mean=state_stats[0], o_std=np.sqrt(state_stats[1]),
                                         g_mean=goal_stats[0], g_std=np.sqrt(goal_stats[1]))
-            action = agent.choose_action(inputs)
-            var = 0.2
-            noise = np.random.normal(0, max_action * var, size=action_dim)
-            action = np.clip(action + noise, -max_action, max_action)
+                action = agent.choose_action(inputs)
+                var = 0
+                noise = np.random.normal(0, max_action * var, size=action_dim)
+                action = np.clip(action + noise, -max_action, max_action)
             next_obs, reward, done_rb, done, info = env.step(action)
             next_state = next_obs['observation']
             next_desired_goal = next_obs['desired_goal']
@@ -123,7 +126,7 @@ while traj < 100:
 
 print("Average score of demonstrations = ", np.mean(score_history))
 print("Average success of demonstrations = ", np.mean(success_history))
-file_name = f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData.pkl"
+file_name = f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_0.5+0.5.pkl"
 open_file = open(file_name, "wb")
 pickle.dump(replay_buffer, open_file)
 open_file.close()

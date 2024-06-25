@@ -227,7 +227,7 @@ class Agent(object):
             # Actor #
             if self.total_it % self.policy_freq == 0:
                 if self.method == "MCDropout":
-                    self.critic = self.critic.eval()  # allow stochastic forward passes with dropout
+                    self.critic = self.critic.eval()
                     self.critic_target = self.critic_target.eval()
                 policy_actions = self.actor(input)
                 Q = self.critic(input, policy_actions)[0]
