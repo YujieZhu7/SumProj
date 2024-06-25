@@ -59,7 +59,7 @@ method = "First"
 # else:
 #     drop_rate = 0.0
 # steps_accept = 0
-drop_rate = 0.1
+drop_rate = 0.0
 ensemble_size = 2
 # Set seeds
 seed = 5
@@ -237,7 +237,7 @@ while steps < max_steps + 1:
             print("Acceptance Rate of Demos = %.2f " % (np.mean(last_ten_percent_demos)))
 
     episodes += 1
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_score", score_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_success", success_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_demoaccept",
+# np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_score", score_history)
+# np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_success", success_history)
+# np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/DropoutQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_demoaccept",
         average_accept_demos)
