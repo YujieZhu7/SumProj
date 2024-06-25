@@ -168,6 +168,7 @@ class Agent(object):
             demos_next_input = torch.Tensor(demos_next_input).to(self.device)
 
             # Critic #
+            self.critic_target = self.critic_target.eval()
             with torch.no_grad():
                 noise = (torch.randn_like(action) * self.policy_noise).clamp(-self.noise_clip, self.noise_clip)
                 next_action = (self.actor_target(next_input) + noise).clamp(-self.max_action, self.max_action)
@@ -175,7 +176,7 @@ class Agent(object):
                                                                                          self.noise_clip)
                 demos_next_action = (self.actor_target(demos_next_input) + demos_noise).clamp(-self.max_action,
                                                                                               self.max_action)
-                self.critic_target = self.critic_target.train()
+                
                 target_q = self.critic_target(next_input, next_action)
                 target_q = target_q.min(0)[0]
                 target_q = reward + (1 - done) * self.gamma * target_q
