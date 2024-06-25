@@ -211,11 +211,11 @@ class Agent(object):
                 # for demonstrations
                 demos_policy_actions = self.actor(demos_input)
                 self.critic = self.critic.train()
-                input_repeat = demos_input.repeat(100, 1)
-                action_repeat = demos_action.repeat(100, 1)
-                policy_actions_repeat = demos_policy_actions.repeat(100, 1)
-                Q_dem_set = self.critic(input_repeat, action_repeat)[0].reshape(100, self.batch_size_demo)
-                demos_Q_set = self.critic(input_repeat, policy_actions_repeat)[0].reshape(100, self.batch_size_demo)
+                input_repeat = demos_input.repeat(1000, 1)
+                action_repeat = demos_action.repeat(1000, 1)
+                policy_actions_repeat = demos_policy_actions.repeat(1000, 1)
+                Q_dem_set = self.critic(input_repeat, action_repeat)[0].reshape(1000, self.batch_size_demo)
+                demos_Q_set = self.critic(input_repeat, policy_actions_repeat)[0].reshape(1000, self.batch_size_demo)
                 self.critic = self.critic.eval()
                 if self.method == "MCDropout":
                     demos_Q_std = torch.std(demos_Q_set, dim=0)
