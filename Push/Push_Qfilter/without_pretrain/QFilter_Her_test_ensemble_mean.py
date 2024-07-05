@@ -78,8 +78,8 @@ goal_dim = env.observation_space['desired_goal'].shape[0]
 obs_dim = state_dim + goal_dim
 action_dim = env.action_space.shape[0]
 max_action = env.action_space.high[0]
-var=0.5
-open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_RanNoise{var}.pkl", "rb")
+# var=0.5
+open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_test0.5+1.pkl", "rb")
 dataset = pickle.load(open_file)
 open_file.close()
 
@@ -101,6 +101,7 @@ replay_buffer = []
 score_history = []
 success_history = []
 percent_accept_demos = []
+average_accept_demos = []
 steps = 0
 episodes = 0
 episodes_eval = 25 # take the average score of 25 episodes
@@ -196,7 +197,6 @@ while steps < max_steps + 1:
     if episodes % eps_eval == 0:
         score_temp = []
         fin_temp = []
-        average_accept_demos = []
         for e in range(episodes_eval):
             done_eval = False
             obs_eval = env_eval.reset()[0]
@@ -236,7 +236,8 @@ while steps < max_steps + 1:
             print("Acceptance Rate of Demos = %.2f " % (np.mean(last_ten_percent_demos)))
 
     episodes += 1
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RanNoise{var}/{method}/EnsSize_{ensemble_size}_S{seed}_score", score_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RanNoise{var}/{method}/EnsSize_{ensemble_size}_S{seed}_success", success_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RanNoise{var}/{method}/EnsSize_{ensemble_size}_S{seed}_demoaccept",
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/EnsSize_{ensemble_size}_S{seed}_score", score_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/EnsSize_{ensemble_size}_S{seed}_success", success_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/EnsSize_{ensemble_size}_S{seed}_demoaccept",
         average_accept_demos)
+

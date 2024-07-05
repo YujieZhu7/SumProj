@@ -126,7 +126,7 @@ while traj < 100:
 
 print("Average score of demonstrations = ", np.mean(score_history))
 print("Average success of demonstrations = ", np.mean(success_history))
-file_name = f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_0.5+0.5.pkl"
+file_name = f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_test.pkl"
 open_file = open(file_name, "wb")
 pickle.dump(replay_buffer, open_file)
 open_file.close()

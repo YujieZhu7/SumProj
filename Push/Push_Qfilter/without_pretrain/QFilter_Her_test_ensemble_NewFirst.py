@@ -49,11 +49,11 @@ def finalize(existingAggregate):
 ########################################################################
 
 # Load environment
-env_name = 'FetchSlide'
-env = gym.make('FetchSlide-v2')
-env_train = gym.make('FetchSlide-v2')
-env_eval = gym.make('FetchSlide-v2')
-method = "NewFirst"
+env_name = 'FetchPush'
+env = gym.make('FetchPush-v2')
+env_train = gym.make('FetchPush-v2')
+env_eval = gym.make('FetchPush-v2')
+method = "LCB+Mean"
 if method == "MCDropout":
     drop_rate = 0.1
 else:
@@ -78,8 +78,8 @@ goal_dim = env.observation_space['desired_goal'].shape[0]
 obs_dim = state_dim + goal_dim
 action_dim = env.action_space.shape[0]
 max_action = env.action_space.high[0]
-var=0.2
-open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_noise{var}.pkl", "rb")
+# var=0.2
+open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_test0.5+1.pkl", "rb")
 dataset = pickle.load(open_file)
 open_file.close()
 
@@ -91,7 +91,7 @@ for i in range(len(dataset)):
     states_agg = update(states_agg, np.array(dataset[i][0]))
     goals_agg = update(goals_agg, np.array(dataset[i][4]))
 
-max_steps = 5e6
+max_steps = 2e6
 memory_size = 1e6
 
 batch_size = 1024
@@ -101,6 +101,8 @@ replay_buffer = []
 score_history = []
 success_history = []
 percent_accept_demos = []
+average_accept_demos = []
+
 steps = 0
 episodes = 0
 episodes_eval = 25 # take the average score of 25 episodes
@@ -228,10 +230,12 @@ while steps < max_steps + 1:
         else:
             last_ten_percent_demos = percent_accept_demos[-10:] if len(
                 percent_accept_demos) > 10 else percent_accept_demos
+            average_accept_demos.append(np.mean(last_ten_percent_demos))
             print("Acceptance Rate of Demos = %.2f " % (np.mean(last_ten_percent_demos)))
 
     episodes += 1
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_score", score_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_success", success_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/0.5+1EnsSize_{ensemble_size}_S{seed}_demoaccept",
-        percent_accept_demos)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/EnsSize_{ensemble_size}_S{seed}_score", score_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/EnsSize_{ensemble_size}_S{seed}_success", success_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/EnsQfilter/RandGausNoise/{method}/EnsSize_{ensemble_size}_S{seed}_demoaccept",
+        average_accept_demos)
+

@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import random
 import pickle
-import TD3_HER_BC_only as TD3
+from Qfilter_HER.Algo import TD3_HER_BC_only as TD3
 
 # use the ensemble method first, then consider MC dropout
 
@@ -57,7 +57,7 @@ env_eval = gym.make('FetchSlide-v2')
 # steps_accept = 0
 # ensemble_size = 2
 # Set seeds
-seed = 5
+seed = 1
 offset = 100
 env.reset(seed=seed)
 env.action_space.seed(seed)
@@ -75,7 +75,7 @@ obs_dim = state_dim + goal_dim
 action_dim = env.action_space.shape[0]
 max_action = env.action_space.high[0]
 # var=0.6
-open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_RanNoise0.1.pkl", "rb")
+open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_noNoise.pkl", "rb")
 dataset = pickle.load(open_file)
 open_file.close()
 
@@ -222,5 +222,5 @@ while steps < max_steps + 1:
 
     episodes += 1
 
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/TD3_BC_only/RanNoise0.1/BC_S{seed}_score", score_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/TD3_BC_only/RanNoise0.1/BC_S{seed}_sucess", success_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/TD3_BC_only/noNoise/BC_S{seed}_score", score_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/TD3_BC_only/noNoise/BC_S{seed}_sucess", success_history)

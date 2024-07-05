@@ -215,35 +215,36 @@ class Agent(object):
                 demos_policy_actions = self.actor(demos_input)
 
                 demos_Q_set = self.critic(demos_input, demos_policy_actions)
+                Q_dem_set = self.critic(demos_input, demos_action)
                 demos_Q_std = torch.std(demos_Q_set, dim=0)
+                Q_dem_std = torch.std(Q_dem_set, dim=0)
                 # print(demos_Q_std)
                 if self.method == "NewFirst":
                     # take only one pair of Q values to compare from the ensembles
                     demos_Q = self.critic(demos_input, demos_policy_actions)[0]
                     Q_dem = self.critic(demos_input, demos_action)[0]
-                if self.method == "Mean":
-                    demos_Q_set = self.critic(demos_input, demos_policy_actions)
-                    Q_dem_set = self.critic(demos_input, demos_action)
-                    demos_Q = torch.mean(demos_Q_set, dim=0)
-                    Q_dem = torch.mean(Q_dem_set, dim=0)
-                if self.method == "Minimum":
-                    demos_Q = self.critic(demos_input, demos_policy_actions).min(0)[0]
-                    Q_dem = self.critic(demos_input, demos_action).min(0)[0]
-                if self.method == "LCB":
-                    demos_Q_set = self.critic(demos_input, demos_policy_actions)
-                    Q_dem_set = self.critic(demos_input, demos_action)
-                    demos_Q_std = torch.std(demos_Q_set, dim=0)
-                    Q_dem_std = torch.std(Q_dem_set, dim=0)
-                    demos_Q = torch.mean(demos_Q_set, dim=0) - 2*demos_Q_std
-                    Q_dem = torch.mean(Q_dem_set, dim=0) - 2 * Q_dem_std
-
-                indicator_std = torch.ge(demos_Q_std, 0.1)
-                indicator_Q = torch.ge(Q_dem, demos_Q)
-                combined_indicator = indicator_std | (indicator_Q & ~indicator_std)
-                mask = combined_indicator.reshape(self.batch_size_demo, 1).repeat(1, self.action_dim)
-                num_accept = mask.sum(dim=0)[0].detach().cpu().item()
-                num_total = self.batch_size_demo
-                BC_loss = F.mse_loss(torch.masked_select(demos_policy_actions, mask), torch.masked_select(demos_action, mask))
+                    indicator_std = torch.ge(demos_Q_std, 0.1)
+                    indicator_Q = torch.ge(Q_dem, demos_Q)
+                    combined_indicator = indicator_std | (indicator_Q & ~indicator_std)
+                    mask = combined_indicator.reshape(self.batch_size_demo, 1).repeat(1, self.action_dim)
+                    num_accept = mask.sum(dim=0)[0].detach().cpu().item()
+                    num_total = self.batch_size_demo
+                    BC_loss = F.mse_loss(torch.masked_select(demos_policy_actions, mask),
+                                         torch.masked_select(demos_action, mask))
+                if self.method == "LCB+Mean":
+                    demos_Q_mean = torch.mean(demos_Q_set, dim=0)
+                    Q_dem_mean = torch.mean(Q_dem_set, dim=0)
+                    demos_Q_lcb = demos_Q_mean - 2 * demos_Q_std
+                    Q_dem_lcb = Q_dem_mean - 2 * Q_dem_std
+                    indicator_std = torch.ge(Q_dem_std, 0.1)
+                    indicator_mean = torch.ge(Q_dem_mean, demos_Q_mean)
+                    indicator_lcb = torch.ge(Q_dem_lcb, demos_Q_lcb)
+                    combined_indicator = (indicator_mean & indicator_std) | (indicator_lcb & ~indicator_std)
+                    mask = combined_indicator.reshape(self.batch_size_demo, 1).repeat(1, self.action_dim)
+                    num_accept = mask.sum(dim=0)[0].detach().cpu().item()
+                    num_total = self.batch_size_demo
+                    BC_loss = F.mse_loss(torch.masked_select(demos_policy_actions, mask),
+                                         torch.masked_select(demos_action, mask))
 
                 actor_loss = -self.lmbda1 * Q.mean() + self.lmbda2 * BC_loss
                 self.actor_loss_history.append(actor_loss.item())

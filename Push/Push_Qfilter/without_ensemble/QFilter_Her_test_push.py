@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import random
 import pickle
-import TD3_HER_Qfilter_countdemo as TD3
+from Qfilter_HER.Algo import TD3_HER_Qfilter_countdemo as TD3
 
 # use the ensemble method first, then consider MC dropout
 
@@ -74,8 +74,8 @@ goal_dim = env.observation_space['desired_goal'].shape[0]
 obs_dim = state_dim + goal_dim
 action_dim = env.action_space.shape[0]
 max_action = env.action_space.high[0]
-var=0.5
-open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_RanNoise{var}.pkl", "rb")
+# var=0.5
+open_file = open(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Data/{env_name}/DemoData_test0.5+1.pkl", "rb")
 dataset = pickle.load(open_file)
 open_file.close()
 
@@ -91,7 +91,7 @@ for i in range(len(dataset)):
     states_agg = update(states_agg, np.array(dataset[i][0]))
     goals_agg = update(goals_agg, np.array(dataset[i][4]))
 
-max_steps = 2e6
+max_steps = 4e6
 memory_size = 1e6
 # step_eval = 50
 
@@ -102,6 +102,7 @@ replay_buffer = []
 score_history = []
 success_history = []
 percent_accept_demos = []
+average_accept_demos=[]
 steps = 0
 episodes = 0
 episodes_eval = 25 # take the average score of 25 episodes
@@ -201,7 +202,7 @@ while steps < max_steps + 1:
     if episodes % eps_eval == 0:
         score_temp = []
         fin_temp = []
-        average_accept_demos=[]
+
         for e in range(episodes_eval):
             done_eval = False
             obs_eval = env_eval.reset()[0]
@@ -242,7 +243,7 @@ while steps < max_steps + 1:
 
 
     episodes += 1
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/StdQfilter/RanNoise{var}/Qfilter_S{seed}_score", score_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/StdQfilter/RanNoise{var}/Qfilter_S{seed}_success", success_history)
-np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/StdQfilter/RanNoise{var}/Qfilter_S{seed}_demoaccept",
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/StdQfilter/RandGausNoise/0.5+1Qfilter_S{seed}_score", score_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/StdQfilter/RandGausNoise/0.5+1Qfilter_S{seed}_success", success_history)
+np.save(f"/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Results/{env_name}/StdQfilter/RandGausNoise/0.5+1Qfilter_S{seed}_demoaccept",
         average_accept_demos)
