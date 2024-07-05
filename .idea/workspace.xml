@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0963d207-585a-418c-ad93-251d6625b984" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2hh5hCJTFJOjgSVSiM3MmQfXZcm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.DataCollection_FetchPush.executor": "Run",
+    "Python.DataCollection_FetchPush2.executor": "Run",
+    "Python.DataCollection_FetchPush_nostd.executor": "Run",
+    "Python.DataCollection_FetchSlide.executor": "Run",
+    "Python.Pretrain_Test.executor": "Run",
+    "Python.Pretrain_ensemble.executor": "Run",
+    "Python.Push_Test_ensemble_withpretrain_mean.executor": "Run",
+    "Python.QFilter_Her_test_BC_only.executor": "Run",
+    "Python.QFilter_Her_test_BC_only_FetchSlide.executor": "Run",
+    "Python.QFilter_Her_test_BC_only_NEW.executor": "Run",
+    "Python.QFilter_Her_test_BC_only_noise.executor": "Run",
+    "Python.QFilter_Her_test_copy.executor": "Run",
+    "Python.QFilter_Her_test_countdemo.executor": "Run",
+    "Python.QFilter_Her_test_ensemble.executor": "Run",
+    "Python.QFilter_Her_test_ensemble2.executor": "Run",
+    "Python.QFilter_Her_test_ensemble5.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_LCB.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_LCB_NEW.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_first.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_mean.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_minimum.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_modifiedLCB.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_withpretrain.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_withpretrain_lcb.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_withpretrain_mean.executor": "Run",
+    "Python.QFilter_Her_test_ensemble_withpretrain_minimum.executor": "Run",
+    "Python.TD3_HER_Pretrain_Test.executor": "Run",
+    "Python.TD3_HER_Test.executor": "Run",
+    "Python.TD3_HER_Test2.executor": "Run",
+    "Python.TD3_HER_Test_FetchSlide.executor": "Run",
+    "Python.TD3_HER_Test_NEW.executor": "Run",
+    "Python.TD3_HER_Test_OLD.executor": "Run",
+    "Python.TD3_Test_copy.executor": "Run",
+    "Python.Test.executor": "Run",
+    "Python.Test_ensemble_withpretrain_first.executor": "Run",
+    "Python.Test_ensemble_withpretrain_lcb.executor": "Run",
+    "Python.Test_ensemble_withpretrain_mean.executor": "Run",
+    "Python.Test_ensemble_withpretrain_minimum.executor": "Run",
+    "Python.mujoco_test.executor": "Run",
+    "Python.result.executor": "Run",
+    "Python.result2.executor": "Run",
+    "Python.result_FetchSlide.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/zhu_y@WMGDS.WMG.WARWICK.AC.UK/PycharmProjects/pythonProject/Qfilter_HER/without_pretrain",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Qfilter_HER/withpretrain" />
+      <recent name="$PROJECT_DIR$/Slide" />
+      <recent name="$PROJECT_DIR$/Ensemble with pretrain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.QFilter_Her_test_BC_only_FetchSlide">
+    <configuration name="DataCollection_FetchSlide" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Slide" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Slide/DataCollection_FetchSlide.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QFilter_Her_test_BC_only_FetchSlide" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Slide" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Slide/QFilter_Her_test_BC_only_FetchSlide.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QFilter_Her_test_countdemo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Qfilter_HER/without_ensemble" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Qfilter_HER/without_ensemble/QFilter_Her_test_countdemo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QFilter_Her_test_ensemble_minimum" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Qfilter_HER/without_pretrain/QFilter_Her_test_ensemble_minimum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QFilter_Her_test_ensemble_modifiedLCB" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Qfilter_HER/without_pretrain/QFilter_Her_test_ensemble_modifiedLCB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.QFilter_Her_test_BC_only_FetchSlide" />
+        <item itemvalue="Python.QFilter_Her_test_countdemo" />
+        <item itemvalue="Python.QFilter_Her_test_ensemble_modifiedLCB" />
+        <item itemvalue="Python.DataCollection_FetchSlide" />
+        <item itemvalue="Python.QFilter_Her_test_ensemble_minimum" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0963d207-585a-418c-ad93-251d6625b984" name="Changes" comment="" />
+      <created>1718033585471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718033585471</updated>
+      <workItem from="1718189442951" duration="141177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Test_ensemble_withpretrain_lcb.coverage" NAME="Test_ensemble_withpretrain_lcb Coverage Results" MODIFIED="1718811217186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ensemble with pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_withpretrain.coverage" NAME="QFilter_Her_test_ensemble_withpretrain Coverage Results" MODIFIED="1718969649678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/withpretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_BC_only_FetchSlide.coverage" NAME="QFilter_Her_test_BC_only_FetchSlide Coverage Results" MODIFIED="1718986819401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Slide" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_HER_Pretrain_Test.coverage" NAME="TD3_HER_Pretrain_Test Coverage Results" MODIFIED="1718802763757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$mujoco_test.coverage" NAME="mujoco_test Coverage Results" MODIFIED="1718189991839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Test_ensemble_withpretrain_minimum.coverage" NAME="Test_ensemble_withpretrain_minimum Coverage Results" MODIFIED="1718811134573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ensemble with pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_withpretrain_mean.coverage" NAME="QFilter_Her_test_ensemble_withpretrain_mean Coverage Results" MODIFIED="1718810839761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/withpretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_HER_Test_NEW.coverage" NAME="TD3_HER_Test_NEW Coverage Results" MODIFIED="1718967429174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_LCB.coverage" NAME="QFilter_Her_test_ensemble_LCB Coverage Results" MODIFIED="1718986096507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_Test_copy.coverage" NAME="TD3_Test_copy Coverage Results" MODIFIED="1718190527028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_copy.coverage" NAME="QFilter_Her_test_copy Coverage Results" MODIFIED="1718454151512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$DataCollection_FetchPush.coverage" NAME="DataCollection_FetchPush Coverage Results" MODIFIED="1718888952756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Push" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_BC_only_NEW.coverage" NAME="QFilter_Her_test_BC_only_NEW Coverage Results" MODIFIED="1718802694345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_ensemble" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Pretrain_Test.coverage" NAME="Pretrain_Test Coverage Results" MODIFIED="1718800068428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Test_ensemble_withpretrain_mean.coverage" NAME="Test_ensemble_withpretrain_mean Coverage Results" MODIFIED="1718811127342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ensemble with pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble2.coverage" NAME="QFilter_Her_test_ensemble2 Coverage Results" MODIFIED="1718624640914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_BC_only.coverage" NAME="QFilter_Her_test_BC_only Coverage Results" MODIFIED="1718793179054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_ensemble" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_HER_Test_OLD.coverage" NAME="TD3_HER_Test_OLD Coverage Results" MODIFIED="1718966795462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$result.coverage" NAME="result Coverage Results" MODIFIED="1718626949316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_mean.coverage" NAME="QFilter_Her_test_ensemble_mean Coverage Results" MODIFIED="1718986115836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble5.coverage" NAME="QFilter_Her_test_ensemble5 Coverage Results" MODIFIED="1718628402604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_countdemo.coverage" NAME="QFilter_Her_test_countdemo Coverage Results" MODIFIED="1718986778834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_ensemble" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_BC_only_noise.coverage" NAME="QFilter_Her_test_BC_only_noise Coverage Results" MODIFIED="1718706766532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_ensemble" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_HER_Test.coverage" NAME="TD3_HER_Test Coverage Results" MODIFIED="1718974527213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_HER_Test2.coverage" NAME="TD3_HER_Test2 Coverage Results" MODIFIED="1718382158660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble.coverage" NAME="QFilter_Her_test_ensemble Coverage Results" MODIFIED="1718969723540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_minimum.coverage" NAME="QFilter_Her_test_ensemble_minimum Coverage Results" MODIFIED="1718986151388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Test_ensemble_withpretrain_first.coverage" NAME="Test_ensemble_withpretrain_first Coverage Results" MODIFIED="1718811035103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ensemble with pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$result2.coverage" NAME="result2 Coverage Results" MODIFIED="1718881142276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$DataCollection_FetchPush2.coverage" NAME="DataCollection_FetchPush2 Coverage Results" MODIFIED="1718798962476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Pretrain_ensemble.coverage" NAME="Pretrain_ensemble Coverage Results" MODIFIED="1718808038379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$TD3_HER_Test_FetchSlide.coverage" NAME="TD3_HER_Test_FetchSlide Coverage Results" MODIFIED="1718809683613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Slide" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$DataCollection_FetchPush_nostd.coverage" NAME="DataCollection_FetchPush_nostd Coverage Results" MODIFIED="1718373190936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_first.coverage" NAME="QFilter_Her_test_ensemble_first Coverage Results" MODIFIED="1718985861167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_LCB_NEW.coverage" NAME="QFilter_Her_test_ensemble_LCB_NEW Coverage Results" MODIFIED="1718802732639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$DataCollection_FetchSlide.coverage" NAME="DataCollection_FetchSlide Coverage Results" MODIFIED="1718986201558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Slide" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_withpretrain_lcb.coverage" NAME="QFilter_Her_test_ensemble_withpretrain_lcb Coverage Results" MODIFIED="1718970008889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/withpretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$result_FetchSlide.coverage" NAME="result_FetchSlide Coverage Results" MODIFIED="1718985769898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_withpretrain_minimum.coverage" NAME="QFilter_Her_test_ensemble_withpretrain_minimum Coverage Results" MODIFIED="1718810888780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/withpretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$Push_Test_ensemble_withpretrain_mean.coverage" NAME="Push_Test_ensemble_withpretrain_mean Coverage Results" MODIFIED="1718883018814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/withpretrain" />
+    <SUITE FILE_PATH="coverage/TD3_HER_py$QFilter_Her_test_ensemble_modifiedLCB.coverage" NAME="QFilter_Her_test_ensemble_modifiedLCB Coverage Results" MODIFIED="1718986433840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qfilter_HER/without_pretrain" />
+  </component>
+</project>
